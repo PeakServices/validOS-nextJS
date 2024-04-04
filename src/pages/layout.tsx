@@ -1,3 +1,4 @@
+"use client"
 export const metadata = {
   title: 'nextOS',
   description: 'webOS made in Next.js',
