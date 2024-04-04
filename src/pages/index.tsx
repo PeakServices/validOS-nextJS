@@ -1,11 +1,9 @@
-"use client"
+"use strict"
 import { Button } from "@/components/ui/button"
-import "@/styles/globals.css"
 import { Globe } from "lucide-react"
 import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 const WinBox = dynamic(() => import('react-winbox'), {ssr: false});
-import 'winbox/dist/css/winbox.min.css';
 
 import {
   Menubar,
@@ -40,11 +38,10 @@ export default function Home() {
   }, []);
 
   return (
-    <body>
 <div>
 <Menubar>
       <MenubarMenu>
-        <MenubarTrigger>validOS</MenubarTrigger>
+        <MenubarTrigger>nextOS</MenubarTrigger>
         <MenubarContent>
           <MenubarItem>
             New Tab <MenubarShortcut>⌘T</MenubarShortcut>
@@ -117,10 +114,8 @@ export default function Home() {
       <MenubarMenu>
         <MenubarTrigger>Profiles</MenubarTrigger>
         <MenubarContent>
-          <MenubarRadioGroup value="benoit">
-            <MenubarRadioItem value="andy">Andy</MenubarRadioItem>
-            <MenubarRadioItem value="benoit">Benoit</MenubarRadioItem>
-            <MenubarRadioItem value="Luis">Luis</MenubarRadioItem>
+          <MenubarRadioGroup value="ansh">
+            <MenubarRadioItem value="ansh">Ansh</MenubarRadioItem>
           </MenubarRadioGroup>
           <MenubarSeparator />
           <MenubarItem inset>Edit...</MenubarItem>
@@ -129,7 +124,6 @@ export default function Home() {
         </MenubarContent>
       </MenubarMenu>
     </Menubar>
-    </div>
     <div className="flex h-screen flex-col items-center justify-center">
         <div className="flex-grow" />
         {isClient && (
@@ -147,21 +141,15 @@ export default function Home() {
               </CardContent>
 
               <CardContent>
-                <Button className="w-full" onClick={() => <WinBox></WinBox>}>
-                  
+                <Button className="w-full" onClick={() => alert("hi")}>
+                  Say Hello
                 </Button>
               </CardContent>
             </Card>
-
-
-
-            <script type="module">
-              {`import WinBox from "https://unpkg.com/winbox@0.2.82/src/js/winbox.js";`}
-            </script>
           </>
         )}
         <div className="flex-grow" />
       </div>
-    </body>
+    </div>
   )
 }
