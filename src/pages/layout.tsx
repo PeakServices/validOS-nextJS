@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'nextOS',
-  description: 'webOS made in Next.js',
+  description: 'webOS made in nextJS',
 }
 
 export default function RootLayout({
