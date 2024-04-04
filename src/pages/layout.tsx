@@ -1,5 +1,6 @@
-"use client";
-export const metadata = {
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
   title: 'nextOS',
   description: 'webOS made in Next.js',
 }
