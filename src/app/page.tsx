@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import "@/styles/globals.css"
-
+import { Globe } from "lucide-react"
 import {
   Menubar,
   MenubarCheckboxItem,
@@ -17,13 +17,22 @@ import {
   MenubarTrigger,
 } from "@/components/ui/menubar"
 
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+
 export default function Home() {
   return (
     <body>
 <div>
 <Menubar>
       <MenubarMenu>
-        <MenubarTrigger>Finder</MenubarTrigger>
+        <MenubarTrigger>validOS</MenubarTrigger>
         <MenubarContent>
           <MenubarItem>
             New Tab <MenubarShortcut>⌘T</MenubarShortcut>
@@ -109,6 +118,24 @@ export default function Home() {
       </MenubarMenu>
     </Menubar>
     </div>
+    <div className="flex h-screen flex-col items-center justify-center">
+			<div className="flex-grow" />
+    <Card className="mx-auto flex h-96 w-96 flex-col items-center justify-center">
+  <CardHeader>
+    <CardTitle className="mx-auto mb-2 flex flex-col items-center justify-center">
+    <Globe className="h-14 w-14" />
+      <h2 className="mt-2 text-3xl font-semibold">What the Sigma!?</h2>
+    </CardTitle>
+    
+    <CardDescription className="text-center">validOS NextJS Rewrite</CardDescription>
+  </CardHeader>
+  <CardContent className="mt-8 text-center text-base">
+    <p>Just a nice rewrite of the entire source code.<br></br>validOS NexJS Rewrite uses tailwind, typescript, and shadCN.</p>
+  </CardContent>
+</Card>
+    <div className="flex-grow" />
+		</div>
+
     </body>
   )
 }
