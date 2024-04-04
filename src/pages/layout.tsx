@@ -1,6 +1,4 @@
-import { Metadata } from 'next'
-
-export const metadata: Metadata = {
+export const metadata = {
   title: 'nextOS',
   description: 'webOS made in Next.js',
 }
